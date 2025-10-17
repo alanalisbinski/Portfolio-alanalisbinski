@@ -83,7 +83,7 @@
 
   .My  buttonn: active {
       background-color: #008b90;
-    }
+  }
         
   /* Skills */
   .skills {
@@ -107,6 +107,7 @@
     text-align: center;
   }
 
+  /* Circle animada */
   .circle {
     width: 120px;
     height: 120px;
@@ -117,13 +118,51 @@
     font-size: 18px;
     font-weight: bold;
     margin: 0 auto 15px;
-    background: conic-gradient(#00adb5 98%, #333 0);
+    background: conic-gradient(#333 0%, #333 0%);
   }
 
   .circle span {
     background: #121212;
     padding: 20px;
     border-radius: 50%;
+  }
+
+  /* Animações específicas para cada skill */
+  .skill:nth-child(1) .circle {
+    animation: fillCircleHTML 2s forwards;
+  }
+  .skill:nth-child(2) .circle {
+    animation: fillCircleCSS 2s forwards;
+  }
+  .skill:nth-child(3) .circle {
+    animation: fillCircleJS 2s forwards;
+  }
+  .skill:nth-child(4) .circle {
+    animation: fillCircleNode 2s forwards;
+  }
+  .skill:nth-child(5) .circle {
+    animation: fillCircleReact 2s forwards;
+  }
+
+  @keyframes fillCircleHTML {
+    from { background: conic-gradient(#333 0%, #333 0%); }
+    to   { background: conic-gradient(#00adb5 85%, #333 0); }
+  }
+  @keyframes fillCircleCSS {
+    from { background: conic-gradient(#333 0%, #333 0%); }
+    to   { background: conic-gradient(#00adb5 67%, #333 0); }
+  }
+  @keyframes fillCircleJS {
+    from { background: conic-gradient(#333 0%, #333 0%); }
+    to   { background: conic-gradient(#00adb5 45%, #333 0); }
+  }
+  @keyframes fillCircleNode {
+    from { background: conic-gradient(#333 0%, #333 0%); }
+    to   { background: conic-gradient(#00adb5 50%, #333 0); }
+  }
+  @keyframes fillCircleReact {
+    from { background: conic-gradient(#333 0%, #333 0%); }
+    to   { background: conic-gradient(#00adb5 52%, #333 0); }
   }
 
   .skill i {
@@ -336,11 +375,10 @@
       height: 150px;
     }
   }
-</style>
+  </style>
 
 </head>  
 <body>  
-  
   <!-- Header -->  
   <header>  
     <h1>Alana Lisbinski - Portfólio</h1>  
@@ -410,6 +448,8 @@
                 também foi uma oportunidade para unir criatividade e desenvolvimento de software.</p>  
           <a href="https://github.com/alanalisbinski/ReliquiasdeValderia" target="_blank">Ver Projeto</a>  
         </div>  
+      </div>
+    </div>
   </section>  
   
   <!-- Timeline -->  
@@ -439,20 +479,4 @@
   </section>  
   
 </body>  
-  
-</html>  
-  
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
-
+</html>
