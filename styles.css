@@ -211,4 +211,9 @@
 
   .footer-space {
     margin-bottom: 50px;
+
+    .email {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      display: flex;
   }
