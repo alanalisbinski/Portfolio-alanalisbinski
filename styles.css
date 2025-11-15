@@ -17,34 +17,53 @@
     box-sizing: border-box;
   }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.header-left span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ccc;
+}
+
+.header-right {
+  font-size: 0.95rem;
+  color: #ddd;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
   .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px dotted #ddd;
-    border-radius: 12px;
-    padding: 10px 20px;
-    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 10px;
   }
-  .header-left {
-    font-weight: 700;
-    font-size: 2.2rem;
-    color: #eee;
-    letter-spacing: 3px;
-  }
-  .header-left span {
-    font-weight: 300;
-    font-size: 1rem;
-    letter-spacing: 1px;
-    display: block;
-    margin-top: -6px;
-  }
+
   .header-right {
+    white-space: normal;
+    word-break: break-word;
     font-size: 0.9rem;
-    color: #ccc;
-    line-height: 1.3;
-    text-align: right;
   }
+
+  .header-left {
+    font-size: 1.2rem;
+  }
+}
 
   .main-content {
     display: flex;
@@ -211,9 +230,4 @@
 
   .footer-space {
     margin-bottom: 50px;
-
-    .email {
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-      display: flex;
   }
